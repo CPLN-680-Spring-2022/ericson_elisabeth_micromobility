@@ -1,7 +1,5 @@
-# MUSA Capstone Project on Dockless Micromobility
+# Predicting Shared Dockless Vehicle Time to Activation
 
-(better title to come, with any luck)
+`/raw_data/` currently contains minute-to-minute inactive dockless bike location data scraped from Washington, D.C.'s Capital Bikeshare system between January 31 and February 1, 2022; minute-to-minute data for available bicycles and docks at Capital Bikeshare docking stations during the same period; a one-time scrape of Capital Bikeshare station information on January 31, 2022; Capital Bikeshare trip history data for December 2021 and January 2022; and San Francisco Bay Wheels trip history data for January 2022. Of those, I am currently only using the first dataset; I explored the others in the initial stages of this project.
 
-`/raw_data/` contains Capital Bikeshare trip history data for December 2021, the most recent available as of 2022-01-27. Data contains trip ID, bicycle type, start and end time, start and end docking station (if applicable), start and end coordinates (inexact for dockless trips), and the rider type (member or casual). For the final project I will want to look at more than one month, but starting with this for initial exploration.
-
-`/notebooks/` contains, at the moment, one small and unpolished Jupyter Notebook with some _very_ preliminary exploratory analysis. I'll expand on this for the next assignment, and will probably keep most of the exploratory work in notebooks to later refine into final Python scripts.
+`/notebooks/` contains a handful of Jupyter notebooks containing the initial proof-of-concept API scraper, some preliminary exploratory analysis, and some technical problem-solving.
