@@ -40,7 +40,7 @@ def scrape_dockless_vehicles(provider, time_scraped=None):
     # GBFS free_bike_status endpoint URLs for all D.C. dockless providers as of 2022-04-13
     # source: https://ddot.dc.gov/page/dockless-api
     provider_urls = {
-        'Bird': 'https://gbfs.bird.co/dc',  # TODO: REMOVE X
+        'Bird': 'https://gbfs.bird.co/dc',
         'Capital Bikeshare': 'https://gbfs.capitalbikeshare.com/gbfs/en/free_bike_status.json',
         'Helbiz': 'https://admin-api-prod.helbizscooters.com//reporting/washington/gbfs/free_bike_status.json',
         'Lime': 'https://data.lime.bike/api/partners/v1/gbfs/washington_dc/free_bike_status.json',
@@ -63,8 +63,10 @@ def scrape_dockless_vehicles(provider, time_scraped=None):
 
         # open cursor to perform database operations
         with conn.cursor() as cur:
+
             # iterate through JSON objects to parse
             for bike in bikes:
+
                 # select relevant fields, coercing type where necessary
                 bike_id = bike['bike_id']
                 vehicle_type = bike['vehicle_type'] if 'vehicle_type' in bike else bike['type']
