@@ -1,3 +1,6 @@
+# old files supplanted by newer versions
 old/**
+
+# history files, caches, etc.
+.Rhistory
 **/.ipynb_checkpoints
-**/.Rhistory
