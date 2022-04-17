@@ -1,7 +1,7 @@
 """Scrapes D.C. dockless vehicle locations every minute.
 
 Scrapes General Bikeshare Feed Specification (GBFS) free_bike_status API endpoints for all current Washington, D.C.
-dockless vehicle providers as of 2022-06-16. Saves data to a PostgreSQL database. Logs any errors to a separate table.
+dockless vehicle providers as of 2022-04-16. Saves data to a PostgreSQL database. Logs any errors to a separate table.
 """
 
 import traceback
