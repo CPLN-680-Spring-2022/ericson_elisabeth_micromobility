@@ -1,5 +1,5 @@
 /* 
-DRAFT TABLE CREATION QUERY 
+VEHICLE TABLE CREATION QUERY 
 2022-04-10 
 
 Roughly based on GBFS free_bike_status.json schema,
