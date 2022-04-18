@@ -52,14 +52,13 @@ def scrape_dockless_vehicles(provider, time_scraped=None):
     url = provider_urls[provider]
 
     # retrieve data from API endpoint; convert to JSON
-    r = requests.get(url)
-    j = r.json()
+    request_json = requests.get(url).json()
 
     # extract individual vehicles
-    bikes = j['data']['bikes']
+    bikes = request_json['data']['bikes']
 
     # connect to database
-    with psycopg.connect("dbname=capstone-local user=eli") as conn:
+    with psycopg.connect("dbname=capstone-aws user=ubuntu") as conn:
 
         # open cursor to perform database operations
         with conn.cursor() as cur:
@@ -117,7 +116,7 @@ def scrape_all():
             time_failed = datetime.now().astimezone().isoformat(timespec='seconds', sep=' ')
             traceback_text = traceback.format_exc()
 
-            with psycopg.connect("dbname=capstone-local user=eli") as conn:
+            with psycopg.connect("dbname=capstone-aws user=ubuntu") as conn:
 
                 with conn.cursor() as cur:
                     cur.execute("""

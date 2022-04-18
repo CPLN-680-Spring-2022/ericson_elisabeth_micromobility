@@ -19,4 +19,4 @@ CREATE TABLE vehicles (
 	lat DECIMAL(10, 8) NOT NULL,
 	lon DECIMAL(11, 8) NOT NULL,
 	time_scraped TIMESTAMPTZ NOT NULL
-);
+) PARTITION BY RANGE(time_scraped);
