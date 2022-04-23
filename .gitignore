@@ -1,3 +1,6 @@
+# too-large data files
+**/pg_dump/**
+
 # old files supplanted by newer versions
 old/**
 
