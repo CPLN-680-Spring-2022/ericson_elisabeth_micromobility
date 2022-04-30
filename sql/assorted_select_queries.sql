@@ -59,7 +59,8 @@ SELECT
 	provider,
 	bike_id,
 	MAX(time_scraped) - MIN(time_scraped) AS duration,
-	ST_Collect(geometry) AS geometries
+	ST_Collect(geometry) AS multipoint,
+	ST_Envelope(multipoint) AS envelope
 FROM vehicles
 WHERE provider = 'Lime'
 GROUP BY bike_id
