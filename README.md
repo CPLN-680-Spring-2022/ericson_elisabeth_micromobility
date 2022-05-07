@@ -1,4 +1,8 @@
-# Predicting Shared Dockless Vehicle Time to Activation
+# Scraping Real-Time Dockless Vehicle Data to Model Time to Activation
+
+## Status
+
+An unfinished version of the final report is saved in the root directory as "Final report - UNFINISHED." I have had another difficult medical week but am continuing to write.
 
 ## Repo structure
 
