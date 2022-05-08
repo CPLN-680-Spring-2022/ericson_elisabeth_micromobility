@@ -1,0 +1,172 @@
+time_scraped,provider,time_failed,traceback
+2022-04-21 11:49:00-04,Capital Bikeshare,2022-04-21 11:49:00-04,"Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File ""/usr/lib/python3.8/json/__init__.py"", line 357, in loads
+    return _default_decoder.decode(s)
+  File ""/usr/lib/python3.8/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File ""/usr/lib/python3.8/json/decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""free_bike_scraper.py"", line 113, in scrape_all
+    scrape_dockless_vehicles(provider, time_scraped=time_scraped)
+  File ""free_bike_scraper.py"", line 55, in scrape_dockless_vehicles
+    request_json = requests.get(url).json()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+"
+2022-04-23 12:48:00-04,Spin,2022-04-23 12:50:39-04,"Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 700, in _update_chunk_length
+    self.chunk_left = int(line, 16)
+ValueError: invalid literal for int() with base 16: b''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 441, in _error_catcher
+    yield
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 767, in read_chunked
+    self._update_chunk_length()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 704, in _update_chunk_length
+    raise InvalidChunkLength(self, line)
+urllib3.exceptions.InvalidChunkLength: InvalidChunkLength(got length b'', 0 bytes read)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 760, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 575, in stream
+    for line in self.read_chunked(amt, decode_content=decode_content):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 796, in read_chunked
+    self._original_response.close()
+  File ""/usr/lib/python3.8/contextlib.py"", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 458, in _error_catcher
+    raise ProtocolError(""Connection broken: %r"" % e, e)
+urllib3.exceptions.ProtocolError: (""Connection broken: InvalidChunkLength(got length b'', 0 bytes read)"", InvalidChunkLength(got length b'', 0 bytes read))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""free_bike_scraper.py"", line 113, in scrape_all
+    scrape_dockless_vehicles(provider, time_scraped=time_scraped)
+  File ""free_bike_scraper.py"", line 55, in scrape_dockless_vehicles
+    request_json = requests.get(url).json()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/api.py"", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/api.py"", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/sessions.py"", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/sessions.py"", line 687, in send
+    r.content
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 838, in content
+    self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 763, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: (""Connection broken: InvalidChunkLength(got length b'', 0 bytes read)"", InvalidChunkLength(got length b'', 0 bytes read))
+"
+2022-04-23 12:59:00-04,Spin,2022-04-23 13:00:16-04,"Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 441, in _error_catcher
+    yield
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 770, in read_chunked
+    chunk = self._handle_chunk(amt)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 714, in _handle_chunk
+    value = self._fp._safe_read(amt)
+  File ""/usr/lib/python3.8/http/client.py"", line 613, in _safe_read
+    data = self.fp.read(amt)
+  File ""/usr/lib/python3.8/socket.py"", line 669, in readinto
+    return self._sock.recv_into(b)
+  File ""/usr/lib/python3.8/ssl.py"", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File ""/usr/lib/python3.8/ssl.py"", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 760, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 575, in stream
+    for line in self.read_chunked(amt, decode_content=decode_content):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 796, in read_chunked
+    self._original_response.close()
+  File ""/usr/lib/python3.8/contextlib.py"", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/urllib3/response.py"", line 458, in _error_catcher
+    raise ProtocolError(""Connection broken: %r"" % e, e)
+urllib3.exceptions.ProtocolError: (""Connection broken: ConnectionResetError(104, 'Connection reset by peer')"", ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""free_bike_scraper.py"", line 113, in scrape_all
+    scrape_dockless_vehicles(provider, time_scraped=time_scraped)
+  File ""free_bike_scraper.py"", line 55, in scrape_dockless_vehicles
+    request_json = requests.get(url).json()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/api.py"", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/api.py"", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/sessions.py"", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/sessions.py"", line 687, in send
+    r.content
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 838, in content
+    self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 763, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: (""Connection broken: ConnectionResetError(104, 'Connection reset by peer')"", ConnectionResetError(104, 'Connection reset by peer'))
+"
+2022-04-29 12:11:00-04,Capital Bikeshare,2022-04-29 12:11:00-04,"Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File ""/usr/lib/python3.8/json/__init__.py"", line 357, in loads
+    return _default_decoder.decode(s)
+  File ""/usr/lib/python3.8/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File ""/usr/lib/python3.8/json/decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""free_bike_scraper.py"", line 113, in scrape_all
+    scrape_dockless_vehicles(provider, time_scraped=time_scraped)
+  File ""free_bike_scraper.py"", line 55, in scrape_dockless_vehicles
+    request_json = requests.get(url).json()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+"
+2022-05-01 12:47:00-04,Capital Bikeshare,2022-05-01 12:47:01-04,"Traceback (most recent call last):
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File ""/usr/lib/python3.8/json/__init__.py"", line 357, in loads
+    return _default_decoder.decode(s)
+  File ""/usr/lib/python3.8/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File ""/usr/lib/python3.8/json/decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""free_bike_scraper.py"", line 113, in scrape_all
+    scrape_dockless_vehicles(provider, time_scraped=time_scraped)
+  File ""free_bike_scraper.py"", line 55, in scrape_dockless_vehicles
+    request_json = requests.get(url).json()
+  File ""/home/ubuntu/venv/capstone/lib/python3.8/site-packages/requests/models.py"", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+"
