@@ -1,4 +1,4 @@
-# Scraping Real-Time Dockless Vehicle Data to Model Time to Activation
+# MUSA Capstone: Real-Time Micromobility Data Pipeline for Shared Vehicle Survival Modeling
 
 ## Final report
 
