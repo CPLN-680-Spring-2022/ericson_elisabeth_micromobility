@@ -21,4 +21,4 @@ The final report is saved in the root directory as `Final Report.pdf`. It has a 
 - a one-time scrape of Capital Bikeshare station information on January 31, 2022; Capital Bikeshare trip history data for December 2021 and January 2022
 - San Francisco Bay Wheels trip history data for January 2022
 
-I have reorganized the old data slightly and will update this README to reflect it. Due to the enormous size of my vehicle database, I could not possibly include it here. The full `vehicles` table contains 212 million records across a dozen partitions, but I may export a sample as a CSV for illustrative purposes.
+I have reorganized the old data slightly and will update this README to reflect it. Due to the enormous size of my vehicle database, I could not possibly include it here. The full `vehicles` table contains more than 212 million records across a dozen partitions, but I may export a sample as a CSV for illustrative purposes.
