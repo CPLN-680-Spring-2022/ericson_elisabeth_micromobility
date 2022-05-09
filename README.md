@@ -14,11 +14,6 @@ The final report is saved in the root directory as `Final Report.pdf`. It has a 
 
 `/r/` contains a couple of small exploratory R scripts I created early on because I still find ggplot easier to use than matplotlib/seaborn.
 
-`/raw_data/` contents include but are not limited to the following: 
+`/raw_data/` contents include an export of the errors logged to my PostgreSQL database by my scraper script, along with the preliminary bikeshare data I collected during a test run of an early version of my scraper in late January, 2022. The latter includes dockless vehicle status, docked station status, and docking station information for Washington, D.C.'s Capital Bikeshare system.
 
-- minute-to-minute inactive dockless bike location data scraped from Washington, D.C.'s Capital Bikeshare system between January 31 and February 1, 2022
-- minute-to-minute data for available bicycles and docks at Capital Bikeshare docking stations during the same period
-- a one-time scrape of Capital Bikeshare station information on January 31, 2022; Capital Bikeshare trip history data for December 2021 and January 2022
-- San Francisco Bay Wheels trip history data for January 2022
-
-I have reorganized the old data slightly and will update this README to reflect it. Due to the enormous size of my vehicle database, I could not possibly include it here. The full `vehicles` table contains more than 212 million records across a dozen partitions, but I may export a sample as a CSV for illustrative purposes.
+Due to the enormous size of my vehicle database, I could not include my final dataset here. The full `vehicles` table contains more than 212 million records across a dozen partitions, but I may export a sample as a CSV for illustrative purposes.
