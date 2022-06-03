@@ -2,7 +2,7 @@
 
 ## Final report
 
-The final report is saved in the root directory as `Final Report.pdf`. It has a conclusion now.
+The final report is saved in the root directory as `Final Report.pdf`.
 
 ## Repo structure
 
