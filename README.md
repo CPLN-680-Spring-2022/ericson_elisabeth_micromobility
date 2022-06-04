@@ -6,7 +6,7 @@ The final report is saved in the root directory as `Final Report.pdf`.
 
 ## Repo structure
 
-`py` contains the Python script I used to query micromobility providers' `free_bike_status` API endpoints, parse JSON requests, and write structured data to a PostgreSQL database on a minute-to-minute basis. This script is what I would like all my code to look like.
+`py` contains the Python script I used to query micromobility providers' `free_bike_status` API endpoints, parse JSON requests, and write structured data to a PostgreSQL database on a minute-to-minute basis. This is without a doubt the cleanest code here.
 
 `/notebooks/` contains several Jupyter notebooks with the initial proof-of-concept API scraper, some preliminary exploratory analysis, some technical problem-solving, the revised scraper that I turned into the final script, some more analysis and visualization, and survival modeling to predict vehicle time to activation. These notebooks are _messy_, and I wish I'd had time to clean them up.
 
